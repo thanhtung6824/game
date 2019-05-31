@@ -5,8 +5,181 @@
 <head>
     <meta charset="UTF-8">
     <title>Đua Xe tốc độ cao</title>
-    <link href="script/style.css" rel="stylesheet" /> </head>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background-color: #4196c6;
+            font-family: sans-serif;
+        }
 
+        #container{
+            position: relative;
+            height: 90vh;
+            width: 25%;
+            left: 35%;
+            margin-top: 20px;;
+            background-color: #938d8d;
+            overflow: hidden;
+        }
+        .line{
+            position: absolute;
+            height: 150px;
+            width: 4%;
+            margin-left: 48%;
+            background-color: rgba(255,255,255,0.5);
+        }
+        #line_1{
+            top: -150px;
+        }
+        #line_2{
+            top: 150px;
+        }
+        #line_3{
+            top: 450px;
+        }
+        .car{
+            position: absolute;
+            height: 60px;
+            width: 40px;
+        }
+        #car{
+            bottom: 8%;
+            left: 60%;
+        }
+        .f_glass{
+            position: absolute;
+            height: 20%;
+            width: 60%;
+            margin-left: 20%;
+            top: 15%;
+            border-radius: 0px 0px 5px 5px;
+            background-color: #484848;
+        }
+        .b_glass{
+            position: absolute;
+            height: 20%;
+            width: 60%;
+            margin-left: 20%;
+            bottom: 15%;
+            border-radius: 5px 5px 0px 0px;
+            background-color: #484848;
+        }
+        .f_light_l{
+            position: absolute;
+            height: 10%;
+            width: 20%;
+            margin-left: 10%;
+            top: -6%;
+            border-radius: 5px 5px 0px 0px;
+            background-color: #efefef;
+        }
+        .f_light_r{
+            position: absolute;
+            height: 10%;
+            width: 20%;
+            margin-left: 70%;
+            top: -6%;
+            border-radius: 5px 5px 0px 0px;
+            background-color: #efefef;
+        }
+        .f_tyre_l{
+            position: absolute;
+            height: 20%;
+            width: 10%;
+            background-color: grey;
+            top: 20%;
+            left: -10%;
+            border-radius: 5px 0px 0px 5px;
+        }
+        .f_tyre_r{
+            position: absolute;
+            height: 20%;
+            width: 10%;
+            background-color: grey;
+            top: 20%;
+            left: 100%;
+            border-radius: 0px 5px 5px 0px;
+        }
+        .b_tyre_l{
+            position: absolute;
+            height: 20%;
+            width: 10%;
+            background-color: grey;
+            top: 70%;
+            left: -10%;
+            border-radius: 5px 0px 0px 5px;
+        }
+        .b_tyre_r{
+            position: absolute;
+            height: 20%;
+            width: 10%;
+            background-color: grey;
+            top: 70%;
+            left: 100%;
+            border-radius: 0px 5px 5px 0px;
+        }
+        #car_1{
+            top: -100px;
+            left: 60%;
+        }
+        #car_2{
+            top: -200px;
+            left: 40%;
+        }
+        #car_3{
+            top: -350px;
+            left: 50%;
+        }
+        #restart_div {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #292929;
+            color: white;
+            font-family: sans-serif;
+            font-size: 40px;
+            text-align: center;
+            display: none;
+        }
+
+        #restart {
+            border: none;
+            padding: 25px;
+            color: white;
+            background-color: #8a64ff;
+            font-size: 30px;
+            margin-top: 30%;
+        }
+        .small_text{
+            font-size: 15px;
+        }
+        #score_div{
+            position: absolute;
+            margin-top: 20%;
+            margin-left: 10%;
+            font-size: 35px;
+            background-color: white;
+            color: #454545;
+            padding: 10px;
+            box-shadow: 4px 4px 0px 1px #808080;
+        }
+        #help{
+            text-align: center;
+        }
+        #donate{
+            position: absolute;
+            right: 10px;
+            top: 25px;
+            background: rgba(255,255,255,0.8);
+            padding: 12px;
+        }
+        .car7{
+            width:100%;
+            height:100%;
+        }
+    </style>
 <body>
 
 <div id="score_div">
@@ -22,35 +195,35 @@
     <div id="line_4" class="line"></div>
     <div id="line_5" class="line"></div>
     <div id="car" class="car">
-        <image src="img/car8.png"/>
+        <image src="images/car8.png"/>
     </div>
     <div id="car_1" class="car">
-        <image src="img/car9.png"/>
+        <image src="images/car9.png"/>
     </div>
     <div id="car_2" class="car">
-        <image src="img/car6.png"/>
+        <image src="images/car6.png"/>
     </div>
     <div id="car_3" class="car">
-        <image src="img/car5.png"/>
+        <image src="images/car5.png"/>
     </div>
     <div id="car_4" class="car">
         <div class="car7">
-            <image src="img/car7.png"/>
+            <image src="images/car7.png"/>
         </div>
     </div>
     <div id="car_5" class="car">
         <div class="">
-            <image src="img/car4.png"/>
+            <image src="images/car4.png"/>
         </div>
     </div>
     <div id="car_6" class="car">
         <div class="">
-            <image src="img/car2.png"/>
+            <image src="images/car2.png"/>
         </div>
     </div>
     <div id="car_7" class="car">
         <div class="">
-            <image src="img/car11.png"/>
+            <image src="images/car11.png"/>
         </div>
     </div>
     <div id="restart_div">
